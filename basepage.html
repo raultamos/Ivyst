@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ivyst - multiservicios</title>
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Kochi&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    
+</head>
+<body>
+    <header>
+<!--clases e hipervinculos!!!-->
+        <a href="basepage.html"><h1 class="logo">Ivyst</h1></a>
+        <nav>
+            <ul class="navmenu">
+                <li>
+                    <a href="#Valores"class="menu">Valores</a>
+                    <a href="Valores/mision-vision.html"><div class="submenu">Instalaciones</div></a>
+                </li>
+                <li>
+                    <a href="#Servicios"class="menu">Servicios</a>
+                    <a href="servicios/servicios.html"><div class="submenu">Instalaciones</div></a>
+                </li>
+                <!-- <li>
+                    <a href="#Telefonía" class="menu">Telefonía</a>
+                    <div class="submenu">Instalaciones</div>
+                </li> -->
+                <li>
+                    <a href="#Ayuda" class="menu">Ayuda</a>
+                    <a href="ayuda/helppage.html"><div class="submenu">Contactanos!</div></a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <section class="hero" id="Ivyst">
+        <div class="hero-content">
+            <h1 class="hero-title">Bienvenido a <b>Ivyst</b></h1>
+            <p>Conectando el futuro de las <b>telecomunicaciones</b> y <b>tecnologias</b>
+                <br> 
+                <br>
+                con <b>instalaciones</b> de alta calidad y <b>servicio al cliente</b> garantizado.</p>
+        </div>
+        <img src="WhatsApp_Image_2025-04-20_at_23.21.37-removebg-preview.png" alt="Ivyst" class="hero-gif" />
+
+        <div class="wave-container">
+            <svg class="waves" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+                <defs>
+                    <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+                </defs>
+                <g class="parallax">
+                    <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(0, 0, 0, 0.1)" />
+                    <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(0, 0, 0, 0.2)" />
+                    <use xlink:href="#gentle-wave" x="48" y="5" fill="#f0f0f0" />
+                    <!-- ajuste de capas -->
+                    <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(0, 0, 0, 0.07)"/> 
+                    <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(0, 0, 0, 0.15)"/> 
+                    <use xlink:href="#gentle-wave" x="48" y="5" fill="#ffffff"/>
+                </g>
+            </svg>
+    </div>
+    </section>
+    <section class="planes">
+    <h2 class="planes-title">Servicios</h2>
+    <div id="service-root"></div>
+<!--cartas!!!!-->
+        <div class="cards" id="Servicios">
+            <div class="card">
+                <h3>Servicios</h3>
+                <p>Instalaciones de internet y arreglo de cableado para tu comodidad.</p>
+            </div>
+            <div class="card">
+                <h3>Servicios</h3>
+                <p>Instalaciones de internet y arreglo de cableado para tu comodidad.</p>
+            </div>
+            <div class="card">
+                <h3>Servicios</h3>
+                <p>Instalaciones de internet y arreglo de cableado para tu comodidad.</p>
+            </div>
+            <div class="card">
+                <h3>Servicios</h3>
+                <p>Instalaciones de internet y arreglo de cableado para tu comodidad.</p>
+            </div>
+            <!-- <div class="card" id="Telefonía">
+                <h3>Telefonía</h3>
+                <p>Planes de telefonía móvil y fija para todos.</p>
+            </div> -->
+        </div>
+    </section>
+    <section class="elegirnos">
+        <h2>¿Por Qué Elegirnos?</h2>
+        <div class="motivos">
+          <div class="motivo">
+            <i class="icono"></i> <h3>Experiencia Comprobada</h3>
+            <p>Contamos con años de experiencia en el sector, brindando soluciones efectivas y de alta calidad a nuestros clientes.</p>
+          </div>
+          <div class="motivo">
+            <i class="icono"></i>
+                <h3>Calidad Garantizada</h3>
+                <p>Nos comprometemos a ofrecer mantenimientos y servicios que superen tus expectativas en términos de calidad y rendimiento.</p>
+          </div>
+          <div class="motivo">
+            <i class="icono"></i>
+                <h3>Atención Personalizada</h3>
+                <p>Entendemos que cada cliente es único. Por eso, te brindamos una atención cercana y adaptada a tus necesidades específicas.</p>
+          </div>
+        </div>
+      </section>
+<!--empieza javascript -->
+    <script src="index.js"></script>
+</body>
+</html>

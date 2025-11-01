@@ -1,0 +1,366 @@
+body {
+    font-family: 'Hind Kochi', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem;
+    background-color: #f8f8f8;
+    border-bottom: 2px solid #ccc;
+    animation: fadeInUp 1s ease-out 0s 1 normal both;
+}
+
+.logo {
+    font-size: 3rem;
+    margin: 0;
+    cursor: pointer;
+}
+a {
+    text-decoration: none;  
+    color: black;           
+}
+
+a:visited {
+    text-decoration: none; 
+    color: black;          
+}
+
+nav {
+    background-color: #f8f8f8;
+    padding: 0%;
+    min-height: 20px;
+    margin-top: 0%;
+    font-size: 1.3rem;
+}
+
+.navmenu {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.navmenu li {
+    opacity: 0;
+    animation: fadeInUp 0.5s ease-out 1 normal both;
+}
+
+.navmenu > li:hover .submenu {
+    display: block;
+    position:absolute;
+}
+.navmenu li:nth-child(1) {
+    animation-delay: 0.5s; /* Delay 0.5s after the header appears */
+}
+.navmenu li:nth-child(2) {
+    animation-delay: 0.65s; 
+}
+.navmenu li:nth-child(3) {
+    animation-delay: 0.8s;
+}
+.menu {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+    transition: 0.3s;
+}
+
+.menu:hover {
+    background: #d6d6d6;
+}
+
+/* Submenu estilosososos */
+.submenu {
+    display: none;
+    position: absolute;
+    right: 0;      
+    top: 100%;     
+    background: #f5f5f5;
+    min-width: 200px;
+    font-size: 1.3rem;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    padding: 10px;
+    color: rgb(0, 0, 0);
+}
+.hero {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px; 
+    background-color: #f0f0f0; 
+    overflow: hidden; 
+    padding-bottom: 80px; 
+}
+.wave-container {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 80px; /* Altura de la ola */
+    margin: 0;
+    padding: 0;
+    z-index: 1; /* mantiene la animacion detras de el texto e imagen */
+}
+
+
+.hero-content, .hero-gif {
+    position: relative;
+    z-index: 2; 
+}
+
+.waves {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    left: 0;
+}
+
+/* COMIENZO DE ANIMACIONES */
+
+/* definir animaciones */
+@keyframes move-forever {
+    0% { transform: translate3d(-90px, 0, 0); }
+    100% { transform: translate3d(85px, 0, 0); }
+}
+
+/* aplicar animacion a las svg */
+.parallax use {
+    animation: move-forever 25s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
+}
+
+.parallax use:nth-child(1) {
+    animation-delay: -2s;
+    animation-duration: 7s;
+}
+.parallax use:nth-child(2) {
+    animation-delay: -4s;
+    animation-duration: 10s;
+}
+.parallax use:nth-child(3) {
+    animation-delay: -4s;
+    animation-duration: 13s;
+}
+
+.hero-content, 
+.hero-gif, 
+.planes-title, 
+.cards, 
+.elegirnos h2, 
+.motivo {
+    opacity: 0;
+    transform: translateY(30px); /* empieza 30px por debajo */
+    transition: 
+        opacity 0.8s ease-out, 
+        transform 0.8s ease-out; 
+}
+
+/* clase que se añade al js cuando se revela */
+.animate-reveal {
+    opacity: 1;
+    transform: translateY(0); 
+}
+
+.motivos .motivo:nth-child(2) {
+    transition-delay: 0.1s;
+}
+
+.motivos .motivo:nth-child(3) {
+    transition-delay: 0.2s;
+}
+/* FIN DE ANIMACIONES */
+
+
+.hero-content {
+    flex: 1; /* para q la pagina se adapte al tamaño de la ventana */
+    margin-right: 10px; /*espacio entre texto e imagen (!)(!)*/
+    font-size: 1.4rem;
+    animation: fadeInUp 1s ease-out 0.6s 1 normal both;
+}
+
+.hero-title {
+    font-size: 3em; 
+    font-weight: bold; 
+}
+
+.hero-gif {
+    max-width: 100%; /* para q la imagen no se salga de la pantalla*/
+    height: auto; 
+    margin-left: -20%;
+    border-radius: 10px; 
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    animation: fadeInUp 1s ease-out 0.8s 1 normal both;
+}
+
+.hero-gif:hover{
+    transform: scale(1.03);
+    transition: transform 0.3s ease;
+}
+
+/*cartas*/
+.planes {
+    padding: 40px 20px; /* Espaciado alrededor de la seccion */
+    background-color: #f9f9f9; /* Color de fondo opcional */
+    text-align: center;
+
+}
+
+.planes-title {
+    font-size: 2.5em; /* Tamaño de fuente para el título de la sección */
+    margin-bottom: 20px; /* Espaciado debajo del título */
+}
+
+.cards {
+    display: flex;
+    justify-content: center; 
+    flex-wrap: wrap; 
+    gap: 30px; 
+}
+
+/* Individual Card Styling */
+.card {
+    background-color: #ffffff; 
+    border: 1px solid #e0e0e0;
+    border-radius: 10px; 
+    padding: 30px 20px; 
+    width: 250px; 
+    min-height: 220px; 
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); 
+    transition: transform 0.3s, box-shadow 0.3s; 
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.card:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); 
+    border-color: #7a7a7a; 
+}
+
+.card h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 1.8rem;
+    color: #000000; /* Black color */
+}
+
+.cards .card:nth-child(2) {
+    transition-delay: 0.05s;
+}
+.cards .card:nth-child(3) {
+    transition-delay: 0.1s;
+}
+.cards .card:nth-child(4) {
+    transition-delay: 0.15s;
+}
+
+/*fin de cartas*/
+/* Estilo para porque elegirnos */
+
+.elegirnos{
+    text-align: center;
+}
+.motivos {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.motivo {
+    background: white;
+    border-radius: 10px;
+    padding: 2.5rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-left: 4px solid #3498db;
+}
+
+.motivo:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+.icono {
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    background-color: #e8f4fc;
+    border-radius: 50%;
+    position: relative;
+    flex-shrink: 0;
+}
+
+.icono::after {
+    content: '✓';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.5rem;
+    color: #3498db;
+    font-weight: bold;
+}
+
+.motivo h3 {
+    color: #000000;
+    font-size: 1.5rem;
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+.motivo p {
+    color: #000000;
+    margin: 0;
+    line-height: 1.7;
+}
+
+@media (max-width: 768px) {
+    .motivo {
+        flex-direction: column;
+        gap: 2.5rem;
+    }
+    .icono {
+        margin-bottom: 1rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .card {
+        width: calc(50% - 15px); 
+        min-width: 300px; 
+    }
+}
+
+@media (max-width: 600px) {
+    .card {
+        width: 90%; 
+        margin: 0 auto 20px auto; 
+        min-width: initial;
+    }
+}

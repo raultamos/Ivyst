@@ -1,0 +1,60 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contactanos!</title>
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Kochi&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="content-container">
+        <h1>¿Necesitas ayuda?</h1>
+        <p>
+          ¿Tienes preguntas o necesitas asistencia?
+          aqui puedes comunicarte con nosostros!.
+        </p>
+        <button class="cta-btn" id="open">¡Presiona aqui!</button>
+      </div>
+    </header>
+
+    <section class="modal-container" id="modal">
+      <section class="modal">
+        <button class="close-btn" id="close">x</button>
+        <div class="modal-content">
+            
+          <h1>Formulario</h1>
+          <form class="modal-form">
+            <div>
+              <label for="name">Nombre</label>
+              <input
+                type="text"
+                id="name"
+                placeholder="Enter Name"
+                class="form-input"/>
+            </div>
+            <div>
+              <label for="email">Email</label>
+              <input
+                type="text"
+                id="email"
+                placeholder="escribe tu correo electrónico"
+                class="form-input"/>
+            </div>
+            <div>
+              <label for="problem">describe tu problema!</label>
+              <input
+                type="text"
+                id="problema"
+                placeholder="describe tu problema"
+                class="form-input"/>
+            </div>
+            <input type="submit" value="Confirmar" class="submit-btn" />
+          </form>
+        </div>
+      </section>
+    </section>
+    <script src="form.js"></script>
+  </body>
+</html>

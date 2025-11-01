@@ -1,0 +1,118 @@
+body {
+    font-family: 'Hind Kochi', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+.valores-section {
+    padding: 60px 5%; 
+    background-color: #f8f8f8; /* Light background for contrast */
+    text-align: center;
+}
+
+.valores-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 50px;
+    color: #333;
+}
+
+.content-container {
+    display: flex;
+    gap: 40px; 
+    max-width: 1200px; 
+    margin: 0 auto;
+    text-align: left;
+}
+.mission-vision {
+    flex: 2; 
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.mission-vision .box {
+    background-color: #ffffff;
+    padding: 30px;
+    border-left: 5px solid #3498db; 
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    border-radius: 8px;
+    transition: transform 0.3s;
+}
+
+.mission-vision .box:hover {
+    transform: translateY(-3px);
+}
+
+.mission-vision h3 {
+    color: #3498db;
+    font-size: 1.6em;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.core-values {
+    flex: 1; 
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.core-values h3 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 25px;
+}
+
+.core-values ul {
+    list-style: none;
+    padding: 0;
+}
+
+.core-values li {
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px dashed #eee; /* separador */
+}
+
+.core-values li:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.core-values h4 {
+    color: #000;
+    font-size: 1.2em;
+    margin-bottom: 5px;
+}
+
+.section-logo-container {
+    text-align: center;   
+    margin-top: 40px;
+    width: 100%;
+}
+
+.section-logo-img {
+    max-width: 250px; 
+    width: 80%; 
+    height: auto; 
+    transition: transform 0.3s ease-in-out; 
+}
+
+.section-logo-img:hover {
+    transform: scale(1.05);
+}
+
+/* para pantallas de telefonos*/
+
+@media (max-width: 768px) {
+    .content-container {
+        flex-direction: column; 
+    }
+    .mission-vision {
+        order: 2; 
+    }
+    .core-values {
+        order: 1; 
+        margin-bottom: 30px;
+    }
+}
