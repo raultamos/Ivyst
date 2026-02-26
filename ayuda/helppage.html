@@ -1,60 +1,64 @@
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contactanos!</title>
-    <link href="https://fonts.googleapis.com/css2?family=Hind+Kochi&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="helpstyle.css" />
-  </head>
-  <body>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="helpstyle.css">
+    <title>FAQ</title>
+</head>
+<body>
     <header>
-      <div class="content-container">
-        <h1>¿Necesitas ayuda?</h1>
-        <p>
-          ¿Tienes preguntas o necesitas asistencia?
-          aqui puedes comunicarte con nosostros!.
-        </p>
-        <button class="cta-btn" id="open">¡Presiona aqui!</button>
-      </div>
+    <a href="../index.html"><h1 class="logo">Ivyst</h1></a>
+        <nav>
+            <ul class="navmenu">
+                <li>
+                    <a href="mision-vision.html"class="menu">Valores</a>
+                    <a href="../Valores/mision-vision.html"><div class="submenu">Instalaciones</div></a>
+                </li>
+                <li>
+                    <a href="../servicios/servicios.html"class="menu">Servicios</a>
+                    <a href="../servicios/servicios.html"><div class="submenu">Instalaciones</div></a>
+                </li>
+                <li>
+                    <a href="../index.html" class="menu">Inicio</a>
+                    <a href="../index.html"><div class="submenu">volver al inicio</div></a>
+                </li> 
+                <li>
+                    <a href="#Ayuda" class="menu">Ayuda</a>
+                    <a href="../ayuda/helppage.html"><div class="submenu">Contactanos!</div></a>
+                </li>
+            </ul>
+        </nav>
     </header>
 
-    <section class="modal-container" id="modal">
-      <section class="modal">
-        <button class="close-btn" id="close">x</button>
-        <div class="modal-content">
+        <div class="boton">
+                    <a href="#" class="boton-cnt">Contactanos</a>
+      </div>
+    
+    <section class="preguntas-section" id="preguntas">
+        <h2>Preguntas Frecuentes</h2>
+        
+        <div class="question-container">
             
-          <h1>Formulario</h1>
-          <form class="modal-form">
-            <div>
-              <label for="name">Nombre</label>
-              <input
-                type="text"
-                id="name"
-                placeholder="Enter Name"
-                class="form-input"/>
+            <div class="preguntas-frecuentes">
+                
+                <div class="box">
+                    <h3>¿En qué se especializa Ivyst?</h3>
+                    <p>Ser el socio tecnológico líder, proporcionando soluciones de telecomunicaciones y servicios de instalación que garanticen la máxima conectividad y eficiencia para hogares y empresas, impulsando su crecimiento y futuro.</p>
+                </div>
+
+                <div class="box">
+                    <h3>¿Donde se ubican?</h3>
+                    <p>Convertirnos en el referente de calidad y confianza en el sector de multiservicios tecnológicos, reconocidos por nuestra innovación, excelencia en el servicio al cliente y el compromiso con el desarrollo sostenible.</p>
+                </div>
+                
+               <!--  <div class="section-logo-container"> 
+                    <img src="/WhatsApp_Image_2025-04-20_at_23.21.37-removebg-preview.png" 
+                    alt="IVYST" class="section-logo-img">
+                </div> -->
+                
+            </div> 
             </div>
-            <div>
-              <label for="email">Email</label>
-              <input
-                type="text"
-                id="email"
-                placeholder="escribe tu correo electrónico"
-                class="form-input"/>
-            </div>
-            <div>
-              <label for="problem">describe tu problema!</label>
-              <input
-                type="text"
-                id="problema"
-                placeholder="describe tu problema"
-                class="form-input"/>
-            </div>
-            <input type="submit" value="Confirmar" class="submit-btn" />
-          </form>
-        </div>
-      </section>
-    </section>
-    <script src="form.js"></script>
-  </body>
+        </section>
+</body>
 </html>
