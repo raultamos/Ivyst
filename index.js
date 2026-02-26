@@ -29,5 +29,12 @@ document.addEventListener('DOMContentLoaded', function() {
         observer.observe(element);
     });
 });
+const misServicios = [
+    { titulo: "Internet Fibra", desc: "Conexión de alta velocidad para tu hogar." },
+    { titulo: "Cámaras CCTV", desc: "Vigilancia 24/7 con acceso remoto." },
+    { titulo: "Cableado", desc: "Optimización y orden de racks y redes." },
+    { titulo: "Soporte Técnico", desc: "Atención especializada inmediata." }
+];
+
 
 //facilisimo verdad?

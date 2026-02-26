@@ -3,19 +3,35 @@
     margin: 0;
     padding: 0;
 }
+
+body {
+    font-family: 'Hind Kochi', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
  header {
     position: sticky;
     top: 0;
     z-index: 1000;
-}
-
-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0.5rem;
     background-color: #f8f8f8;
     border-bottom: 2px solid #ccc;
+    animation: fadeInUp 1s ease-out 0s 1 normal both;
 }
 
 .logo {
@@ -47,14 +63,23 @@ nav {
     flex-wrap: wrap;
 }
 
-.navmenu > li {
-    position: relative;
-    margin: 0 15px;
+.navmenu li {
+    opacity: 0;
+    animation: fadeInUp 0.5s ease-out 1 normal both;
 }
 
 .navmenu > li:hover .submenu {
     display: block;
     position:absolute;
+}
+.navmenu li:nth-child(1) {
+    animation-delay: 0.5s; /* Delay 0.5s after the header appears */
+}
+.navmenu li:nth-child(2) {
+    animation-delay: 0.65s; 
+}
+.navmenu li:nth-child(3) {
+    animation-delay: 0.8s;
 }
 
 .menu {
@@ -81,6 +106,7 @@ nav {
     padding: 10px;
     color: rgb(0, 0, 0);
 }
+/*COPY ABOVE FOR MENU AND BASIC ANIMATIONS*/
  /* Slideshow Container */
         .tech-slideshow {
             position: relative;

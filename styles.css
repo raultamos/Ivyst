@@ -364,3 +364,11 @@ nav {
         min-width: initial;
     }
 }
+
+.footer-content {
+    background-color: #000000;
+    color: #ffffff;
+    padding: 20px 20px;
+    text-align: right;
+    border-top: 2px solid #ccc;
+}
