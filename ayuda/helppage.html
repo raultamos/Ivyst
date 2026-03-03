@@ -24,16 +24,34 @@
                     <a href="../index.html"><div class="submenu">volver al inicio</div></a>
                 </li> 
                 <li>
-                    <a href="#Ayuda" class="menu">Ayuda</a>
+                    <a href="../ayuda/helppage.html" class="menu">Ayuda</a>
                     <a href="../ayuda/helppage.html"><div class="submenu">Contactanos!</div></a>
                 </li>
             </ul>
         </nav>
     </header>
-
+    <p class="pregunta-text">Tienes alguna pregunta? No dudes en contactarnos, estamos aquí para ayudarte.</p>
         <div class="boton">
-                    <a href="#" class="boton-cnt">Contactanos</a>
-      </div>
+                    <button class="open-button"
+                    onclick="openForm()">Contactanos</button>
+        </div>
+    
+      <div class="form-popup" id="myForm">
+  <form action="https://formspree.io/f/maqdgpee" method="POST" class="form-container">
+    <input type="hidden" name="_next" value="https://raultamos.github.io/Ivyst/index.html">
+    <h1 style="font-size: 28px;">Describe tu problema!</h1>
+
+    <label for="email"><b>Email</b></label>
+    <input type="text" placeholder="Tu correo electrónico" name="email" required>
+
+    <label for="Descripcion"><b>Descripcion del problema</b></label>
+    <textarea rows="4" cols="35" placeholder="Describe tu problema" name="Descripcion" required></textarea>
+
+    <button type="submit" class="btn">Enviar</button>
+    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+  </form>
+
+  </div>
     
     <section class="preguntas-section" id="preguntas">
         <h2>Preguntas Frecuentes</h2>
@@ -49,7 +67,7 @@
 
                 <div class="box">
                     <h3>¿Donde se ubican?</h3>
-                    <p>Convertirnos en el referente de calidad y confianza en el sector de multiservicios tecnológicos, reconocidos por nuestra innovación, excelencia en el servicio al cliente y el compromiso con el desarrollo sostenible.</p>
+                    <p>Estamos ubicados en la ciudad de caracas Venezuela</p>
                 </div>
                 
                <!--  <div class="section-logo-container"> 
@@ -60,5 +78,6 @@
             </div> 
             </div>
         </section>
+        <script src="form.js"></script>
 </body>
 </html>
