@@ -131,10 +131,10 @@ nav {
     position: relative;
     z-index: 2; 
 }
-.letter {
-    display: inline-block;
+.hero-title .letter, 
+.planes-title .letter {
+  display: inline-block;
 }
-
 .waves {
     position: absolute;
     width: 100%;
